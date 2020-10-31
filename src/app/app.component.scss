@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+:host {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: block;
+}
+h1 {
+  font-size: 60px;
+  margin-top: 1rem;
+}
+h2 {
+  font-size: 25px;
+}
+h1,
+h2 {
+  text-align: center;
+}
+.input {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 2rem;
+  input {
+    display: block;
+    width: 100%;
+    background: #d7d7d7;
+    font-size: 26px;
+    line-height: 60px;
+    height: 60px;
+    border-radius: 20px;
+    border: 0;
+    padding: 0.8125rem 3.5rem;
+    margin: 0 0 1rem;
+    transition: all 0.3s;
+    outline: none;
+    &:focus {
+      opacity: 0.9;
+    }
+  }
+  button {
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 26px;
+    line-height: 40px;
+    border-radius: 20px;
+    border: 0;
+    background: #ffa524;
+    opacity: 0.9;
+    min-width: 200px;
+    padding: 0.8125rem 3.5rem;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+.result {
+  width: 30%;
+  margin: 0 1.6%;
+  display: inline-block;
+  cursor: pointer;
+  img {
+    display: block;
+    width: 100%;
+  }
+  h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .price {
+    font-size: 16px;
+  }
+  .stars {
+    overflow: hidden;
+    svg {
+      width: 20px;
+      height: 20px;
+      float: left;
+    }
+  }
+}
+.highlight {
+  animation: pulse 1s 1;
+}
+@keyframes pulse {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

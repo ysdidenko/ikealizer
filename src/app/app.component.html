@@ -1,0 +1,19 @@
+<h1>Did you know</h1>
+<h2>that if you will reverse your name and change some letters to <strong>umlaut</strong> you will probably get a new IKEA product?</h2>
+<form (ngSubmit)="doIt()">
+  <div class="input">
+    <input #input type="text" [(ngModel)]="lastName" placeholder="John Doe" [ngModelOptions]="{standalone: true}">
+    <button (click)="doIt()">Try it out</button>
+  </div>
+</form>
+<div *ngFor="let result of results; let i = index" class="result"  [ngClass]="{highlight: i === 1}">
+  <img [src]="result.img" />
+  <h3>{{result.name}}</h3>
+  <strong class="price">{{result.price}}</strong>
+  <div class="stars">
+    <svg *ngFor="let start of result.stars">
+      <path d="M12.003 4L14.8623 8.9091L20.4147 10.1115L16.6294 14.3478L17.2017 20L12.003 17.7091L6.80429 20L7.37657 14.3478L3.59131 10.1115L9.14371 8.9091L12.003 4Z"></path>
+    </svg>
+  </div>
+ 
+</div>
